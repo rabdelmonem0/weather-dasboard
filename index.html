@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/style.css">
+  <title>Weather Dashboard</title>
+</head>
+
+<body>
+  <header>
+    <div class="jumbotron jumbotron-fluid text-center text-white bg-dark">
+      <div class="container">
+        <h1 class="display-4">Weather Dashboard</h1>
+      </div>
+    </div>
+  </header>
+  <section class="row">
+    <div class="card col-4 ml-5">
+      <div class="card-body">
+        <h5 class="card-title">Search for a City:</h5>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2 city-input" id="city" type="search" placeholder="Search" aria-label="Search">
+          <button onclick="addCity()" class="btn btn-outline-success my-2 my-sm-0 searchBtn" type="submit">Search</button>
+        </form>
+        <div class="card" style="width: 18rem;">
+          <ul class="list-group list-group-flush" id="dynamic-list">
+            <!-- <li class="list-group-item">City1</li>
+            <li class="list-group-item">City2</li>
+            <li class="list-group-item">City3</li>
+            <li class="list-group-item">City4</li>
+            <li class="list-group-item">City5</li>
+            <li class="list-group-item">City6</li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+  
+    <div class="container col-7">
+      <div class="col ">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title city-title"></h5>
+            <p class="card-text temp"></p>
+            <p class="card-text hum"></p>
+            <p class="card-text wind"></p>
+            <p class="card-text uv"></p>
+          </div>
+        </div>
+      </div>
+      <br>
+      <h5 class="ml-4">5-Day Forecast:</h5>
+      <div class="card-deck mt-4 container-fluid text-center text-white"> 
+        <div class="col mb-4">
+          <div class="card bg-primary">
+            <!-- <img src="..." class="card-img-top" alt="..."> -->
+            <div class="card-body">
+              <h5 class="date-1"></h5>
+              <p class="icon-1"></p>
+              <p class="temp-1"></p>
+              <p class="hum-1"></p>
+            </div>
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="card bg-primary">
+            <!-- <img src="..." class="card-img-top" alt="..."> -->
+            <div class="card-body">
+              <h5 class="date-2"></h5>
+              <p class="icon-2"></p>
+              <p class="temp-2"></p>
+              <p class="hum-2"></p>
+            </div>
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="card bg-primary">
+            <!-- <img src="..." class="card-img-top" alt="..."> -->
+            <div class="card-body">
+              <h5 class="date-3"></h5>
+              <p class="icon-3"></p>
+              <p class="temp-3"></p>
+              <p class="hum-3"></p>
+            </div>
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="card bg-primary">
+            <!-- <img src="..." class="card-img-top" alt="..."> -->
+            <div class="card-body">
+              <h5 class="date-4"></h5>
+              <p class="icon-4"></p>
+              <p class="temp-4"></p>
+              <p class="hum-4"></p>
+            </div>
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="card bg-primary">
+            <!-- <img src="..." class="card-img-top" alt="..."> -->
+            <div class="card-body">
+              <h5 class="date-5"></h5>
+              <p class="icon-5"></p>
+              <p class="temp-5"></p>
+              <p class="hum-5"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+<script src="./assets/script.js"></script>
+
+</html>
