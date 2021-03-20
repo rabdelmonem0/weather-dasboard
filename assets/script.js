@@ -133,6 +133,7 @@ window.addEventListener("load", function () {
         if (searchCity) {
             getWeather(searchCity);
             getForecast(searchValue);
+            addCity();
             document.querySelector(".city-input").value = "";
         }
     })
