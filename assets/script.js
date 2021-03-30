@@ -22,7 +22,7 @@ window.addEventListener("load", function () {
     }
 
     function getUVIndex(lat, long) {
-        var fetchUrl = "http://https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + long + "&units=imperial&appid=597dc5ab14150415510a523bbb21b175"
+        var fetchUrl = "https://https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + long + "&units=imperial&appid=597dc5ab14150415510a523bbb21b175"
         fetch(fetchUrl)
             .then(function (res) {
                 return res.json()
@@ -43,7 +43,7 @@ window.addEventListener("load", function () {
     }
 
     function getForecast(searchValue) {
-        var fetchUrl = "http://api.openweathermap.org/data/2.5/forecast?q=" + searchValue + "&units=imperial&appid=597dc5ab14150415510a523bbb21b175"
+        var fetchUrl = "https://api.openweathermap.org/data/2.5/forecast?q=" + searchValue + "&units=imperial&appid=597dc5ab14150415510a523bbb21b175"
         fetch(fetchUrl)
             .then(function (res) {
                 return res.json()
@@ -91,7 +91,7 @@ window.addEventListener("load", function () {
 
 
     function getWeather(searchCity) {
-        var fetchUrl = "http://api.openweathermap.org/data/2.5/weather?q=" + searchCity + "&units=imperial&appid=597dc5ab14150415510a523bbb21b175"
+        var fetchUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + searchCity + "&units=imperial&appid=597dc5ab14150415510a523bbb21b175"
         fetch(fetchUrl)
             .then(function (res) {
                 return res.json()
